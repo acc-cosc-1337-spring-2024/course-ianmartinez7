@@ -1,5 +1,8 @@
 {
     "python.analysis.extraPaths": [
         "./src/homework/e_functions"
+    ],
+    "cSpell.words": [
+        "GAGCCTACTAACGGGAT"
     ]
 }
