@@ -1,9 +1,10 @@
 
 import unittest
+from src.homework.i_dictionaries_sets.sets import get_students_who_took_prog1_and_prog2, get_students_who_took_prog1_not_prog2, get_students_who_took_prog1_or_prog2, get_students_who_took_prog2_not_prog1
 from src.homework.i_dictionaries_sets.dictionary import add_inventory, remove_inventory_widget
-
 class TestInventoryManagement(unittest.TestCase):
 
+# for homework assignment 6
     def test_add_inventory(self):
         
         inventory = {}
@@ -29,3 +30,27 @@ class TestInventoryManagement(unittest.TestCase):
         result = remove_inventory_widget(inventory, 'Widget3')
         self.assertEqual(result, "Item not found", "Failed to return the correct message when item not found.")
 
+
+# test cases for homework assignment 7
+
+
+
+def test_get_students_who_took_prog1_and_prog2(self):
+        expected = {'Student3'}
+        result = get_students_who_took_prog1_and_prog2(self.prog1, self.prog2)
+        self.assertEqual(result, expected)
+
+def test_get_students_who_took_prog1_or_prog2(self):
+        expected = {'Student1', 'Student2', 'Student3', 'Student4', 'Student5'}
+        result = get_students_who_took_prog1_or_prog2(self.prog1, self.prog2)
+        self.assertEqual(result, expected)
+
+def test_get_students_who_took_prog1_not_prog2(self):
+        expected = {'Student1', 'Student2'}
+        result = get_students_who_took_prog1_not_prog2(self.prog1, self.prog2)
+        self.assertEqual(result, expected)
+
+def test_get_students_who_took_prog2_not_prog1(self):
+        expected = {'Student4', 'Student5'}
+        result = get_students_who_took_prog2_not_prog1(self.prog1, self.prog2)
+        self.assertEqual(result, expected)
